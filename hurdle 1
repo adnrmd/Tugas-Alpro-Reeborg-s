@@ -1,0 +1,22 @@
+#fungsi untuk belok kanan
+def turn_right():
+    turn_left()
+    turn_left()
+    turn_left()
+#fungsi untuk melewati tembok
+def step():
+    move()
+    turn_left()
+    move()
+    turn_right()
+    move()
+    turn_right()
+    move()
+    turn_left()
+    
+step()
+step()
+step()
+step()
+step()
+step()
