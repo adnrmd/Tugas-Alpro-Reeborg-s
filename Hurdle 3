@@ -4,37 +4,19 @@ def turn_right():
     turn_left()
     turn_left()
 
-#fungsi melewati 1 dinding
-def lewati_1_dinding():
-    turn_left()
-    move()
-    turn_right()
-    move()
-    turn_right()
-    move()
-    turn_left()
-    
-#fungsi melewati 2 dinding
-def lewati_2_dinding():
-    lewati_1_dinding()
-    lewati_1_dinding()
-
-#fungsi melewati 5 dinding
-def lewati_5_dinding():
-    lewati_1_dinding()
-    lewati_2_dinding()
-    lewati_2_dinding()
-    
-#fungsi gerak robot keseluruhan
-def keseluruhan():
-    lewati_2_dinding()
-    move()
-    lewati_5_dinding()
-    move()
-    move()
-    move()
-    lewati_1_dinding()
-    
-#menjalankan fungsi
-keseluruhan()
- 
+#fungsi melewati dinding
+def lewati_dinding():
+        turn_left()
+        move()
+        turn_right()
+        move()
+        turn_right()
+        move()
+        turn_left()
+        
+#sebelum mencapai goal robot akan terus looping
+while not at_goal():
+    if wall_in_front():
+        lewati_dinding()
+    else :
+        move()
